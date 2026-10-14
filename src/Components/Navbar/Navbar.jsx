@@ -17,6 +17,7 @@ const Navbar = () => {
         <p>SHOPPER</p>
       </div>
 
+      {/* Hamburger icon for mobile */}
       <div className="nav-hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         <span></span>
         <span></span>
@@ -25,11 +26,11 @@ const Navbar = () => {
 
       <ul className={`nav-menu ${mobileMenuOpen ? "nav-menu-mobile" : ""}`}>
         <li onClick={()=>{setMenu("shop"); setMobileMenuOpen(false)}}>
-          <Link to='/' style={{ textDecoration: 'none' }}>Shop</Link>
+          <Link to='/' style={{ textDecoration: 'none' }} >Shop</Link>
           {menu==="shop"?<hr/>:<></>}
         </li>
         <li onClick={()=>{setMenu("mens"); setMobileMenuOpen(false)}}>
-          <Link to='/mens' style={{ textDecoration: 'none' }}>Men</Link>
+          <Link to='/mens' style={{ textDecoration: 'none' }} >Men</Link>
           {menu==="mens"?<hr/>:<></>}
         </li>
         <li onClick={()=>{setMenu("womens"); setMobileMenuOpen(false)}}>
@@ -37,7 +38,7 @@ const Navbar = () => {
           {menu==="womens"?<hr/>:<></>}
         </li>
         <li onClick={()=>{setMenu("kids"); setMobileMenuOpen(false)}}>
-          <Link to='/kids' style={{ textDecoration: 'none' }}>Kids</Link>
+          <Link to='/kids' style={{ textDecoration: 'none' }} >Kids</Link>
           {menu==="kids"?<hr/>:<></>}
         </li>
       </ul>
